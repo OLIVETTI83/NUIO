@@ -1,0 +1,158 @@
+{# Plantilla tapas #}
+
+
+{% block title %}
+
+{% endblock %}
+{% block stylesheets %}<link href="web/vendor/bootstrap/css/nosotros.css" rel="stylesheet">
+
+    <style type="text/css">
+            .wrap{
+                position:relative;
+                width:80vmin; height:80vmin;
+                margin:0 auto;
+                {# background:inherit; #}
+                transform:scale(0.2) translatez(0px);
+                opacity:0;
+                transition:transform .5s, opacity .5s;
+                }
+                .wrap a{
+                position:absolute;
+                left:0; top:0;
+                width:47.5%; height:47.5%;
+                overflow:hidden;
+                transform:scale(.5) translateZ(0px);
+                background:#585247;
+                }
+                .wrap a div{
+                height:100%;
+                background-size:cover;
+                opacity:.5;
+                transition:opacity .5s;
+                border-radius:inherit;
+                }
+                .wrap a:nth-child(1){
+                border-radius:40vmin 0 0 0;
+                transform-origin: 110% 110%;
+                transition:transform .4s .15s;
+                }
+                .wrap a:nth-child(1) div{
+                background-image:url('img/Asset 1@4x.png');
+                }
+                .wrap a:nth-child(2){
+                border-radius:0 40vmin 0 0;
+                left:52.5%;
+                transform-origin: -10% 110%;
+                transition:transform .4s .2s;
+                }
+                .wrap a:nth-child(2) div{
+                background-image:url('img/gravatar.jpg');
+                }
+                .wrap a:nth-child(3){
+                border-radius:0 0 0 40vmin;
+                top:52.5%;
+                transform-origin: 110% -10%;
+                transition:transform .4s .25s;
+                }
+                .wrap a:nth-child(3) div{
+                background-image:url('img/emiliocamara.jpg');
+                }
+                .wrap a:nth-child(4){
+                border-radius:0 0 40vmin 0;
+                top:52.5%; left:52.5%;
+                transform-origin: -10% -10%;
+                transition:transform .4s .3s;
+                }
+                .wrap a:nth-child(4) div{
+                background-image: url('img/nuria2.jpg');
+                }
+                .wrap a:nth-child(5){
+                width:55%;height:55%;
+                left:22.5%; top:22.5%;
+                border-radius:50vmin;
+                {# box-shadow:0 0 0 5vmin #E3DFD2; #}
+                transform:scale(1);
+                }
+                .wrap a:nth-child(5) div{
+                background-image: url('img/logogrande.png');
+                }
+                span{
+                position:relative;
+                display:block;
+                margin:0 auto;
+                top:45vmin;
+                width:8.9vmin; height:8.9vmin;
+                border-radius:100%;
+                background-image: url('img/logomediano.png');
+                transform:translateZ(0px);
+                }
+                span span{
+                position:absolute;
+                width:60%;height:3px;
+                {# background:#ACA696; #}
+                left:20%; top:50%;
+                border-radius:0;
+                }
+                span span:after, span span:before{
+                content:'';
+                position:absolute;
+                left:0; top:-1.5vmin;
+                width:100%; height:100%;
+                background:inherit;
+                }
+                span span:after{
+                top:1.5vmin;
+                }
+                span:hover + .wrap, .wrap:hover{
+                transform:scale(.8) translateZ(0px);
+                opacity:1;
+                }
+                span:hover + .wrap a, .wrap:hover a{
+                transform:scale(1) translatez(0px);
+                }
+                a:hover div{
+                opacity:1;
+                transform:translatez(0px);
+                }
+</style>
+
+{% endblock %}
+
+
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+
+
+<div class= "container">
+    
+  <h1 class="mt-4 mb-3">
+      <small>NUiO Galeria Virtual de Arte</small>
+  </h1>
+
+        <ol class="breadcrumb">
+          <a href="{{ path('homepage') }}">Home</a><li class="breadcrumb-item"></li>
+      
+          <li class="breadcrumb-item active">Integrantes del Equipo</li>
+        </ol>
+
+
+       
+
+        <span><span></span></span>
+        
+<div class="wrap">
+  <a href="{{url ('trabajaform')}}"><div></div></a>
+  <a href="{{url ('cvoliver')}}"><div></div></a>
+  <a href="{{url ('cvemilio')}}"><div></div></a>
+  <a href="{{url ('cvnuria')}}"><div></div></a>
+  <a href="{{url ('homepage')}}"><div></div></a>
+</div>
+</div>   
+
+{% endblock %}
+
+

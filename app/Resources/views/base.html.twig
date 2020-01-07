@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Olivetti rules!{% endblock %}</title>
+
+          <!-- Bootstrap core CSS -->
+          <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+          <!-- Custom styles for this template -->
+          <link href="css/modern-business.css" rel="stylesheet">
+
+        
+        
+        {% block stylesheets %}{% endblock %}
+        
+        
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    
+    
+   
+      
+
+
+<div class="body">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: #bcbec0 !important">
+        <div class="container">
+        <img class="img-fluid" href="{{ path('homepage') }}" src="img/logo2.png" alt="logo">
+          <a class="navbar-brand" href="{{ path('homepage') }}">Galería Virtual de Arte</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{ path('obras') }}">Obras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ path('eventos') }}">Eventos</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{ path('revista') }}">Revista</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ path('nosotros') }}">Nosotros</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{{ path('contacto') }}">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+ </div>
+ 
+        {% block body %}{% endblock %}
+
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        {% block javascripts %}{% endblock %}
+    
+    
+    </body>
+
+
+
+
+</html>

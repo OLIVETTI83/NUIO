@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{# Plantilla app #}
+{# titulo #}
+{% block title %}
+Nueva Obra
+
+{% endblock %}
+
+
+
+
+
+{% block body %}
+
+
+<div class = "container">
+
+  <h1 class="mt-4 mb-3">Nueva Obra</h1>
+    
+
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item" a href="index.html">Home</a></li>
+      
+          <li class="breadcrumb-item active">Nueva Obra</li>
+        </ol>
+        <div class="row">
+        <div class="col-md-8">
+          {{ form_start(form) }}
+          {{ form_widget(form) }}
+          {{ form_end(form) }}
+          </div>
+    </div>
+        
+</div>
+
+
+  {% endblock %}
+
+  {% block stylesheets %}
+
+  <link href="app/web/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="app/web/css/modern-business.css" rel="stylesheet">
+{% endblock %}

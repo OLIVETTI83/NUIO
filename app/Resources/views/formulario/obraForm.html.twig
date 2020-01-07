@@ -1,0 +1,9 @@
+{%- block form-row -%}
+    <div class="control-group form-group">
+        <div class ="controls">
+            {{- form_label(form) -}}
+            {{- form_error(form) -}}
+            {{- form_widget(form) -}}
+        </div>
+    </div>
+{%- endblock form-row -%}
